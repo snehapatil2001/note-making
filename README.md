@@ -1,30 +1,60 @@
-# React + TypeScript + Vite
+# Note Making Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple note-making application built using React for learning purpose using HTML, CSS, Bootstrap, JavaScript, TypeScript. It allows users to create, edit, and delete notes with tags for organization.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Create new notes with titles, content, and tags.
+- Edit existing notes.
+- Delete notes.
+- Organize notes using tags.
+- Responsive design for various screen sizes.
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+The project structure is organized as follows:
 
-- Configure the top-level `parserOptions` property like this:
+- **src/**
+  - **useLocalStorage.tsx:** Custom React hook for managing state in local storage.
+  - **NoteList.tsx:** Component for displaying a list of notes with filtering and tag editing functionalities.
+  - **NoteListModule.css:** CSS module for styling the NoteList component.
+  - **NoteLayout.tsx:** Component for layout management, including displaying individual notes.
+  - **NoteForm.tsx:** Form component for creating and editing notes.
+  - **NewNote.tsx:** Component for creating a new note.
+  - **Main.tsx:** Main entry point of the application.
+  - **EditNote.tsx:** Component for editing existing notes.
+  - **App.tsx:** Main application component managing routes and state.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Getting Started
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+To run the project locally, follow these steps:
+
+1. Clone this repository to your local machine.
+2. Navigate to the project directory.
+3. Install dependencies using npm:
+
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+## Dependencies
+
+To run the project locally, follow these steps:
+
+- **React**: A JavaScript library for building user interfaces.
+- **React Router DOM**: Declarative routing for React applications.
+- **React Bootstrap**: Bootstrap components built with React.
+- **React Markdown**: Markdown component for React.
+- **React Select**: Customizable select component for React.
+- **UUID**: Library for generating unique identifiers.
+
+## Scripts
+
+- dev: Starts the development server.
+- build: Builds the project for production.
+- lint: Lints the project code.
+- preview: Previews the production build locally.
